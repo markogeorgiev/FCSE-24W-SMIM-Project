@@ -1,15 +1,5 @@
-WRITE EVERYTHING AT THE END OF EXISITING NOTEBOOKS OR CREATE NEW ONES IN SEPARATE FILES IN THE RESPECTIVE FOLDER.
+WRITE EVERYTHING AT THE END OF EXISTING NOTEBOOKS OR CREATE NEW ONES IN SEPARATE FILES IN THE RESPECTIVE FOLDER.
 
-1. Approach-A change the train dataset to be balanced;
-    a. Try with balancing the train set (fix the 1:3) inherent ratio of the data.
-    * Try with punishment of underrepresented class.
-
-2. Approach-B Return the KMeans and try Spectral Clustering
-
-3. Approach-C Write a grid-search based on CV on a balanced train set for GCN and GraphSAGE individually.
-    a. Compare GCN Best Results with GraphSAGE best results
-    b. Compare Worst Results of GCN and GraphSAGE
-    c. Compare interesting results between GCN and GraphSAGE
-
-- Wherever the train set is balanced, give details on it's composition and structure. Also explain what
-test set you will use.
+2. Change the figures in approach-b so they make sense:
+    - (Don't plot missing values '-')!!!
+    -
