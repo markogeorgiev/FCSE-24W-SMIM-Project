@@ -26,3 +26,17 @@ Edge Attributes:
 - **missed_bytes** (for gap analysis)
 - **label** (0 = normal, 1 = attack)
 - **type** (attack category, e.g., DDoS, DoS, backdoor)
+
+```python
+class EdgeEnhancedGCN(nn.Module):
+    def __init__(...):
+        self.edge_mlp1 = nn.Sequential(nn.Linear(...), nn.ReLU(), nn.Linear(...))
+        self.conv1 = NNConv(..., self.edge_mlp1)
+        self.edge_mlp2 = nn.Sequential(nn.Linear(...), nn.ReLU(), nn.Linear(...))
+        self.conv2 = NNConv(..., self.edge_mlp2)
+
+    def forward(self, data):
+        x = F.relu(self.conv1(data.x, data.edge_index, data.edge_attr))
+        x = self.dropout(x)
+        return torch.clamp(self.conv2(x, data.edge_index, data.edge_attr), -1e6, 1e6)
+```
