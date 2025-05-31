@@ -1,0 +1,5 @@
+WRITE EVERYTHING AT THE END OF EXISTING NOTEBOOKS OR CREATE NEW ONES IN SEPARATE FILES IN THE RESPECTIVE FOLDER.
+
+2. Change the figures in approach-b so they make sense:
+    - (Don't plot missing values '-')!!!
+    -
